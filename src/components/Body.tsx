@@ -1,5 +1,5 @@
 import React from "react";
-import TimeLine from "./TimeLine/TimeLine.tsx";
+import TimeLine from "./timeLine/TimeLine.tsx";
 
 const Body = () => {
   return (

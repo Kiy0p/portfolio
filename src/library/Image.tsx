@@ -1,14 +1,14 @@
 import Box from "@mui/material/Box";
 import React from "react";
 
-interface Props {
+export interface ImageProps {
   src: string;
   height: number | string;
   width: number | string;
   sx?: any;
 }
 
-const Image = (props: Props) => {
+const Image = (props: ImageProps) => {
   return (
     <Box
       component="img"
