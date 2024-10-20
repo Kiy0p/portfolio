@@ -4,18 +4,18 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
+import { TimelineContent as MuiTimelineContent } from "@mui/lab";
 import Paper from "@mui/material/Paper";
 import React from "react";
-import TimelineContent from "@mui/lab/TimelineContent";
 import Typography from "@mui/material/Typography";
 
-interface TimelineElementProps {
+interface TimelineContentProps {
   content: Array<string>;
 }
 
-const TimelineElement = ({ content }: TimelineElementProps) => {
+const TimelineContent = ({ content }: TimelineContentProps) => {
   return (
-    <TimelineContent display="flex">
+    <MuiTimelineContent display="flex">
       <Paper elevation={5} sx={{ width: "30em" }}>
         <List>
           {content.map((item) => {
@@ -34,8 +34,8 @@ const TimelineElement = ({ content }: TimelineElementProps) => {
           })}
         </List>
       </Paper>
-    </TimelineContent>
+    </MuiTimelineContent>
   );
 };
 
-export default TimelineElement;
+export default TimelineContent;

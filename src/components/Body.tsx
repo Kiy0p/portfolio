@@ -1,11 +1,12 @@
+import { Box } from "@mui/material";
 import React from "react";
-import TimeLine from "./timeLine/TimeLine.tsx";
+import Timeline from "./timeline/Timeline.tsx";
 
 const Body = () => {
   return (
-    <>
-      <TimeLine />
-    </>
+    <Box>
+      <Timeline />
+    </Box>
   );
 };
 

@@ -1,20 +1,20 @@
 import React, { PropsWithChildren } from "react";
 
+import { TimelineSeparator as MuiTimelineSeparator } from "@mui/lab";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineDot from "@mui/lab/TimelineDot";
-import TimelineSeparator from "@mui/lab/TimelineSeparator";
 
-interface TimelineDividerProps extends PropsWithChildren {
+interface TimelineSeparatorProps extends PropsWithChildren {
   color: string;
 }
 
-const TimelineDivider = ({ color, children }: TimelineDividerProps) => {
+const TimelineSeparator = ({ color, children }: TimelineSeparatorProps) => {
   return (
-    <TimelineSeparator>
+    <MuiTimelineSeparator>
       <TimelineDot sx={{ backgroundColor: color }}>{children}</TimelineDot>
       <TimelineConnector />
-    </TimelineSeparator>
+    </MuiTimelineSeparator>
   );
 };
 
-export default TimelineDivider;
+export default TimelineSeparator;
