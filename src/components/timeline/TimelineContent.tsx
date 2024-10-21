@@ -1,3 +1,5 @@
+import React, { PropsWithChildren, ReactNode } from "react";
+
 import Accordion from "@mui/material/Accordion";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -6,27 +8,27 @@ import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import { TimelineContent as MuiTimelineContent } from "@mui/lab";
 import Paper from "@mui/material/Paper";
-import React from "react";
 import Typography from "@mui/material/Typography";
+import theme from "../../theme";
 
-interface TimelineContentProps {
-  content: Array<string>;
+interface TimelineContentProps extends PropsWithChildren {
+  content: Array<ReactNode>;
 }
 
-const TimelineContent = ({ content }: TimelineContentProps) => {
+const TimelineContent = ({ content, children }: TimelineContentProps) => {
   return (
     <MuiTimelineContent display="flex">
-      <Paper elevation={5} sx={{ width: "30em" }}>
+      <Paper elevation={5} sx={{ width: theme.spacing(100) }}>
         <List>
           {content.map((item) => {
             return (
               <ListItem>
                 <Accordion sx={{ width: "100%" }}>
                   <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-                    <Typography>{item}</Typography>
+                    {item}
                   </AccordionSummary>
                   <AccordionDetails>
-                    <Typography>test</Typography>
+                    <Typography>{children}</Typography>
                   </AccordionDetails>
                 </Accordion>
               </ListItem>
