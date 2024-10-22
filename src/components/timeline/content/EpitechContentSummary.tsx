@@ -2,9 +2,9 @@ import { Box, Typography } from "@mui/material";
 
 import Image from "../../../library/Image.tsx";
 import React from "react";
-import theme from "../../../theme";
+import theme from "../../../theme.js";
 
-const EpitechContent = () => {
+const EpitechContentSummary = () => {
   return [
     <Box
       display="flex"
@@ -87,4 +87,4 @@ const EpitechContent = () => {
   ];
 };
 
-export default EpitechContent;
+export default EpitechContentSummary;
