@@ -50,7 +50,7 @@ const Timeline = () => {
             imageProps={{
               src: "./images/logo_ulaval.png",
               height: theme.spacing(6),
-              width: theme.spacing(5),
+              width: theme.spacing(6),
             }}
           />
           <TimelineSeparator color="blue">
@@ -67,7 +67,7 @@ const Timeline = () => {
             imageProps={{
               src: "./images/logo_epitech.png",
               height: theme.spacing(6),
-              width: theme.spacing(5),
+              width: theme.spacing(6),
             }}
           />
           <TimelineSeparator color="blue">
