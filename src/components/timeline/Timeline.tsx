@@ -1,4 +1,3 @@
-import { Box } from "@mui/material";
 import EpitechContentDetail from "./content/EpitechContentDetail.tsx";
 import EpitechContentSummary from "./content/EpitechContentSummary.tsx";
 import KoremContentDetail from "./content/KoremContentDetail.tsx";
@@ -13,6 +12,7 @@ import TimelineSeparator from "./TimelineSeparator.tsx";
 import ULavalContentDetail from "./content/ULavalContentDetail.tsx";
 import ULavalContentSummary from "./content/ULavalContentSummary.tsx";
 import WorkIcon from "@mui/icons-material/Work";
+import styled from "@emotion/styled/macro";
 import { useTheme } from "@mui/material/styles";
 
 const Timeline = () => {
@@ -26,59 +26,57 @@ const Timeline = () => {
         alignItems: "flex-start",
       }}
     >
-      <Box>
-        <TimelineItem>
-          <TimelineOppositeContent
-            title="Korem"
-            imageProps={{
-              src: "./images/logo_korem.png",
-              height: theme.spacing(6),
-              width: theme.spacing(6),
-            }}
-          />
-          <TimelineSeparator color="green">
-            <WorkIcon />
-          </TimelineSeparator>
-          <TimelineContent
-            contentSummary={KoremContentSummary()}
-            contentDetail={KoremContentDetail()}
-          />
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineOppositeContent
-            title="Université Laval"
-            imageProps={{
-              src: "./images/logo_ulaval.png",
-              height: theme.spacing(6),
-              width: theme.spacing(6),
-            }}
-          />
-          <TimelineSeparator color="blue">
-            <MenuBookIcon />
-          </TimelineSeparator>
-          <TimelineContent
-            contentSummary={ULavalContentSummary()}
-            contentDetail={ULavalContentDetail()}
-          />
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineOppositeContent
-            title="Epitech"
-            imageProps={{
-              src: "./images/logo_epitech.png",
-              height: theme.spacing(6),
-              width: theme.spacing(6),
-            }}
-          />
-          <TimelineSeparator color="blue">
-            <MenuBookIcon />
-          </TimelineSeparator>
-          <TimelineContent
-            contentSummary={EpitechContentSummary()}
-            contentDetail={EpitechContentDetail()}
-          />
-        </TimelineItem>
-      </Box>
+      <TimelineItem>
+        <TimelineOppositeContent
+          title="Korem"
+          imageProps={{
+            src: "./images/logo_korem.png",
+            height: theme.spacing(6),
+            width: theme.spacing(6),
+          }}
+        />
+        <TimelineSeparator color="green">
+          <WorkIcon />
+        </TimelineSeparator>
+        <TimelineContent
+          contentSummary={KoremContentSummary()}
+          contentDetail={KoremContentDetail()}
+        />
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineOppositeContent
+          title="Université Laval"
+          imageProps={{
+            src: "./images/logo_ulaval.png",
+            height: theme.spacing(6),
+            width: theme.spacing(6),
+          }}
+        />
+        <TimelineSeparator color="blue">
+          <MenuBookIcon />
+        </TimelineSeparator>
+        <TimelineContent
+          contentSummary={ULavalContentSummary()}
+          contentDetail={ULavalContentDetail()}
+        />
+      </TimelineItem>
+      <TimelineItem>
+        <TimelineOppositeContent
+          title="Epitech"
+          imageProps={{
+            src: "./images/logo_epitech.png",
+            height: theme.spacing(6),
+            width: theme.spacing(6),
+          }}
+        />
+        <TimelineSeparator color="blue">
+          <MenuBookIcon />
+        </TimelineSeparator>
+        <TimelineContent
+          contentSummary={EpitechContentSummary()}
+          contentDetail={EpitechContentDetail()}
+        />
+      </TimelineItem>
     </MuiTimeline>
   );
 };
