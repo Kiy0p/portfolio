@@ -3,8 +3,11 @@ import { Box, Typography } from "@mui/material";
 import Image from "../../../library/Image.tsx";
 import React from "react";
 import theme from "../../../theme.js";
+import { useTranslation } from "react-i18next";
 
 const KoremContentSummary = () => {
+  const { t } = useTranslation();
+
   return [
     <Box
       display="flex"
@@ -12,7 +15,7 @@ const KoremContentSummary = () => {
       alignItems="center"
       width="100%"
     >
-      <Typography>2023-2024 - Korem</Typography>
+      <Typography>{t("timeline.korem.title1")}</Typography>
       <Box display="flex" gap={theme.spacing(2)}>
         <Image
           src="./images/logo_ts.png"

@@ -12,7 +12,7 @@ const Banner = () => {
         src="./images/other/profile_pic.jpg"
         width={theme.spacing(90)}
         height={theme.spacing(135)}
-        sx={{ml: theme.spacing(10)}}
+        sx={{ ml: theme.spacing(10) }}
       />
     </Box>
   );

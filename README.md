@@ -6,3 +6,4 @@
 - [] ajouter le parallax à la timeline
 - [] augmenter la distance entre les elements de la timeline
 - [] peut-être mettre des fonds effet "glass" pour les items de la timeline ?
+- [] ajouter une traduction

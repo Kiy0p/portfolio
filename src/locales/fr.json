@@ -1,0 +1,27 @@
+{
+    "timeline": {
+        "korem": {
+            "oppositContent": "Korem",
+            "title1": "2023-2024 - Korem",
+            "content1": "Korem 1"
+        },
+        "ulaval": {
+            "oppositContent": "Université Laval",
+            "title3": "2023 - Maîtrise, seconde année",
+            "content3": "ULaval 3",
+            "title2": "2022 - Maîtrise, première année",
+            "content2": "ULaval 2",
+            "title1": "2021 - certificat en informatique",
+            "content1": "ULaval 1"
+        },
+        "epitech": {
+            "oppositContent": "Epitech",
+            "title3": "2020 - Bachelor, Troisième année",
+            "content3": "Epitech 3",
+            "title2": "2019 - Bachelor, seconde année",
+            "content2": "Epitech 2",
+            "title1": "2018 - Bachelor, première année",
+            "content1": "Epitech 1"
+        }
+    }
+}

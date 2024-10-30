@@ -1,16 +1,20 @@
 import * as React from "react";
+
 import { Box, Typography } from "@mui/material";
 
+import { useTranslation } from "react-i18next";
+
 const EpitechContentDetail = () => {
+  const { t } = useTranslation();
   return [
     <Box>
-      <Typography>Epitech 1</Typography>
+      <Typography>{t("timeline.epitech.content3")}</Typography>
     </Box>,
     <Box>
-      <Typography>Epitech 2</Typography>
+      <Typography>{t("timeline.epitech.content2")}</Typography>
     </Box>,
     <Box>
-      <Typography>Epitech 3</Typography>
+      <Typography>{t("timeline.epitech.content1")}</Typography>
     </Box>,
   ];
 };

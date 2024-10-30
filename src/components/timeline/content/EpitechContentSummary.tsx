@@ -3,8 +3,11 @@ import { Box, Typography } from "@mui/material";
 import Image from "../../../library/Image.tsx";
 import React from "react";
 import theme from "../../../theme.js";
+import { useTranslation } from "react-i18next";
 
 const EpitechContentSummary = () => {
+  const { t } = useTranslation();
+
   return [
     <Box
       display="flex"
@@ -12,7 +15,7 @@ const EpitechContentSummary = () => {
       alignItems="center"
       width="100%"
     >
-      <Typography>2020 - Bachelor, Troisième année</Typography>
+      <Typography>{t("timeline.epitech.title3")}</Typography>
       <Box display="flex" gap={theme.spacing(2)}>
         <Image
           src="./images/logo_html.png"
@@ -47,7 +50,7 @@ const EpitechContentSummary = () => {
       alignItems="center"
       width="100%"
     >
-      <Typography>2019 - Bachelor, Seconde année</Typography>
+      <Typography>{t("timeline.epitech.title2")}</Typography>
       <Box display="flex" gap={theme.spacing(2)}>
         <Image
           src="./images/logo_c.png"
@@ -77,7 +80,7 @@ const EpitechContentSummary = () => {
       alignItems="center"
       width="100%"
     >
-      <Typography>2018 - Bachelor, Première année</Typography>
+      <Typography>{t("timeline.epitech.title1")}</Typography>
       <Image
         src="./images/logo_c.png"
         width={theme.spacing(4)}

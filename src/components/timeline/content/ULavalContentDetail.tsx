@@ -2,16 +2,20 @@ import * as React from "react";
 
 import { Box, Typography } from "@mui/material";
 
+import { useTranslation } from "react-i18next";
+
 const ULavalContentDetail = () => {
+  const { t } = useTranslation();
+
   return [
     <Box>
-      <Typography>ULaval 1</Typography>
+      <Typography>{t("timeline.ulaval.content3")}</Typography>
     </Box>,
     <Box>
-      <Typography>ULaval 2</Typography>
+      <Typography>{t("timeline.ulaval.content2")}</Typography>
     </Box>,
     <Box>
-      <Typography>ULaval 3</Typography>
+      <Typography>{t("timeline.ulaval.content1")}</Typography>
     </Box>,
   ];
 };
