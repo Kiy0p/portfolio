@@ -12,7 +12,6 @@ import TimelineSeparator from "./TimelineSeparator.tsx";
 import ULavalContentDetail from "./content/ULavalContentDetail.tsx";
 import ULavalContentSummary from "./content/ULavalContentSummary.tsx";
 import WorkIcon from "@mui/icons-material/Work";
-import styled from "@emotion/styled/macro";
 import { useTheme } from "@mui/material/styles";
 
 const Timeline = () => {
