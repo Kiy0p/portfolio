@@ -1,4 +1,4 @@
-import { Box, styled, useTheme } from "@mui/material";
+import { Box, Paper, Stack, styled, useTheme } from "@mui/material";
 
 import { BarChart } from "@mui/x-charts/BarChart";
 import Image from "../library/Image.tsx";
@@ -7,7 +7,7 @@ import React from "react";
 const Banner = () => {
   const theme = useTheme();
 
-  const uData = [1, 2, 3, 4, 2, 1, 0];
+  const uData = [4, 3, 1, 4, 4, 3, 0];
   const xLabels = [
     "C",
     "C++",
@@ -16,35 +16,59 @@ const Banner = () => {
     "JavaScript/TypeScript",
     "Kotlin",
     "C#",
+    "Haskell"
   ];
 
   return (
-    <StyledBox>
+    <StyledContainer>
       <Image
         src="./images/other/profile_pic.png"
         width={theme.spacing(90)}
         height={theme.spacing(135)}
         sx={{ ml: theme.spacing(10) }}
       />
-      <Box display="flex" alignItems="center">
+      <StyledBox>
+        <Stack direction="column-reverse" spacing={4}>
+          <StyledPaper>Utilisé un jour... mais oublié.</StyledPaper>
+          <StyledPaper>Syntaxe et types: ça commence à sonner familier !</StyledPaper>
+          <StyledPaper>Héritage et librairies: je fais des liens !</StyledPaper>
+          <StyledPaper>Code avec aisance: je nage dans les concepts !</StyledPaper>
+          <StyledPaper>Pas besoin de ChatGPT ou de lead dev</StyledPaper>
+        </Stack>
         <BarChart
           width={1000}
           height={500}
-          series={[{ data: uData, label: "uv", id: "uvId" }]}
+          series={[{ data: uData, id: "uvId" }]}
           xAxis={[{ data: xLabels, scaleType: "band" }]}
           yAxis={[
             {
-              valueFormatter: (value) => ["inconnu", "oublié", "bon"][value],
               tickInterval: [0, 1, 2, 3, 4, 5],
             },
           ]}
         />
-      </Box>
-    </StyledBox>
+      </StyledBox>
+    </StyledContainer>
   );
 };
 
-const StyledBox = styled(Box)(({ theme }) => ({
+const StyledPaper = styled(Paper)(({ theme }) => ({
+  backgroundColor: '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+  ...theme.applyStyles('dark', {
+    backgroundColor: '#1A2027',
+  }),
+}));
+
+const StyledBox = styled(Box)(({ theme })=> ({
+  display: "flex",
+  alignItems: "center",
+  height: theme.spacing(100)
+}));
+
+const StyledContainer = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "row",
   backgroundColor: "#DFF2EB",
