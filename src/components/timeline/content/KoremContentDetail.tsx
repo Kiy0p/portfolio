@@ -9,6 +9,8 @@ const KoremContentDetail = () => {
 
   return [
     <Box>
+      <Typography>Développement de solutions clients en Typescript avec React et en Kotlin avec Spring
+      </Typography>
       <Typography>{t("timeline.korem.content1")}</Typography>
     </Box>,
   ];
