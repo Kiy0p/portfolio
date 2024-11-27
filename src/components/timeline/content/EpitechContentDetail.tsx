@@ -14,7 +14,9 @@ const EpitechContentDetail = () => {
       <Typography>{t("timeline.epitech.content2")}</Typography>
     </Box>,
     <Box>
-      <Typography>{t("timeline.epitech.content1")}</Typography>
+      <Typography>
+        - Développement en C de projets d'école. devant suivre sertaines contraintes
+      </Typography>
     </Box>,
   ];
 };
