@@ -1,7 +1,6 @@
-import { Box, Paper, Stack, styled, useTheme } from "@mui/material";
+import { Box, Paper, Stack, Typography, styled, useTheme } from "@mui/material";
 
 import { BarChart } from "@mui/x-charts/BarChart";
-import Image from "../library/Image.tsx";
 import React from "react";
 
 const Banner = () => {
@@ -30,13 +29,15 @@ const Banner = () => {
   ];
 
   return (
-    <StyledContainer>
-      <Image
-        src="./images/other/profile_pic.png"
-        width={theme.spacing(90)}
-        height={theme.spacing(135)}
-        sx={{ ml: theme.spacing(10) }}
-      />
+    <StyledContainer display="flex">
+      <Box alignSelf="" sx={{margin: theme.spacing(10)}}>
+        <Typography variant="h1">
+          Hi, I'm Enzo.
+        </Typography>
+        <Typography variant="h2">
+          I'm a FullStack developer based in Quebec, Canada.
+        </Typography>
+      </Box>
       <Box>
         <StyledBox>
           <Stack direction="column-reverse" spacing={4}>
